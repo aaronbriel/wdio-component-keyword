@@ -1,0 +1,150 @@
+{
+  "name": "wdio-component-keyword",
+  "version": "0.0.1",
+  "description": "A WebDriverIO project that supports web and mobile app test automation.",
+  "author": "Aaron Briel",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {
+    "allure-commandline": "^2.5.0",
+    "appium": "^1.7.2",
+    "appium-controller": "^1.1.6",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "better-npm-run": "^0.1.0",
+    "chai": "4.1.2",
+    "commander": "^2.15.1",
+    "cucumber": "3.1.0",
+    "eslint": "^4.19.1",
+    "glob": "^7.1.2",
+    "google-auth-library": "^1.5.0",
+    "googleapis": "^27.0.0",
+    "jsdoc": "^3.5.5",
+    "promise": "^8.0.1",
+    "shelljs": "^0.8.1",
+    "util": "^0.10.3",
+    "uuid-js": "^0.7.5",
+    "wdio-allure-reporter": "^0.6.0",
+    "wdio-cucumber-framework": "^1.1.1",
+    "wdio-cucumber-reporter": "0.0.2",
+    "wdio-json-reporter": "^0.3.1",
+    "wdio-junit-reporter": "^0.3.1",
+    "wdio-selenium-standalone-service": "^0.0.9",
+    "wdio-spec-reporter": "0.1.2",
+    "webdriverio": "^4.12.0",
+    "webdriverjs-angular": "^0.1.3"
+  },
+  "scripts": {
+    "multiDesktop": "bnr multiDesktop -s",
+    "multiMobile": "bnr multiMobile -s",
+    "chrome": "bnr chrome -s",
+    "firefox": "bnr firefox -s",
+    "safari": "bnr safari -s",
+    "edge": "bnr edge -s",
+    "ie11": "bnr ie11 -s",
+    "androidDevice": "bnr androidDevice -s",
+    "androidEmulator": "bnr androidEmulator -s",
+    "androidChromeMobile": "bnr androidChromeMobile -s",
+    "iphoneDevice": "bnr iphoneDevice -s",
+    "iphoneSimulator": "bnr iphoneSimulator -s",
+    "iphoneChromeMobile": "bnr iphoneChromeMobile -s",
+    "publish-jsdoc": "jsdoc . -r -d docs/ -c docs/config.json",
+    "setupEmail": "node ./src/utility/email.setup.js"
+  },
+  "betterScripts": {
+    "multiDesktop": {
+      "command": "wdio wdio.conf.js --host localhost",
+      "description": "Multiple browsers concurrently on local machine",
+      "env": {
+        "CAPABILITY": "multiDesktop"
+      }
+    },
+    "multiMobile": {
+      "command": "wdio wdio.conf.js --host localhost",
+      "description": "Droid and iPhone concurrently on local machine",
+      "env": {
+        "CAPABILITY": "multiMobile"
+      }
+    },
+    "chrome": {
+      "command": "wdio wdio.conf.js --host localhost",
+      "description": "Chrome on local machine",
+      "env": {
+        "CAPABILITY": "chrome"
+      }
+    },
+    "firefox": {
+      "command": "wdio wdio.conf.js --host localhost",
+      "description": "Firefox on local machine",
+      "env": {
+        "CAPABILITY": "firefox"
+      }
+    },
+    "safari": {
+      "command": "wdio wdio.conf.js --host localhost",
+      "description": "Safari on local machine",
+      "env": {
+        "CAPABILITY": "safari"
+      }
+    },
+    "edge": {
+      "command": "wdio wdio.conf.js --host localhost",
+      "description": "Edge on local machine",
+      "env": {
+        "CAPABILITY": "edge"
+      }
+    },
+    "ie11": {
+      "command": "wdio wdio.conf.js --host localhost",
+      "description": "Internet Explorer 11 on local machine",
+      "env": {
+        "CAPABILITY": "ie11"
+      }
+    },
+    "androidDevice": {
+      "command": "appium-controller --start && wdio wdio.conf.js --host localhost && appium-controller --stop",
+      "description": "Android device",
+      "env": {
+        "CAPABILITY": "androidDevice"
+      }
+    },
+    "androidEmulator": {
+      "command": "wdio wdio.conf.js --host localhost",
+      "description": "Android Emululator on local machine",
+      "env": {
+        "CAPABILITY": "androidEmulator"
+      }
+    },
+    "mobileBackup": {
+      "command": "appium-controller --start && wdio wdio.conf.js --host localhost && appium-controller --stop",
+      "description": "Android Emululator on local machine",
+      "env": {
+        "CAPABILITY": "androidEmulator"
+      }
+    },
+    "androidChromeMobile": {
+      "command": "wdio wdio.conf.js --host localhost",
+      "description": "Android run through Chrome Mobile Emulator",
+      "env": {
+        "CAPABILITY": "androidChromeMobile"
+      }
+    },
+    "iphoneSimulator": {
+      "command": "wdio wdio.conf.js --host localhost",
+      "description": "iPhone Simulator on local machine",
+      "env": {
+        "CAPABILITY": "iphoneSimulator"
+      }
+    },
+    "iphoneChromeMobile": {
+      "command": "wdio wdio.conf.js --host localhost",
+      "description": "iPhone X run through Chrome Mobile Emulator",
+      "env": {
+        "CAPABILITY": "iphoneChromeMobile"
+      }
+    }
+  }
+}

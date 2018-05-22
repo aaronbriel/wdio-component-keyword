@@ -1,0 +1,105 @@
+{
+  "chrome": {
+    "browserName": "chrome",
+    "port": 4444
+  },
+  "chromeBrowserstack": {
+    "maxInstances": 1,
+    "browserName": "chrome",
+    "browserstack.user": "<browserstack_user>",
+    "browserstack.key": "<browserstack_key>",
+    "resolution": "<browserstack_vm_resolution>",
+    "platform": "<browserstack_os_platform>",
+    "browserstack.debug": true
+  },
+  "chromeSauceLabs": {
+    "browserName": "chrome",
+    "version": "<saucelabs_browser_version>",
+    "platform": "<saucelabs_os_platform>",
+    "username": "<saucelabs_username>",
+    "accessKey": "<saucelabs_access_key>"
+  },
+  "firefox": {
+    "browserName": "firefox",
+    "port": 4444
+  },
+  "safari": {
+    "browserName": "safari",
+    "platform": "macOS 10.13",
+    "version": "11.0",
+    "port": 4444
+  },
+  "edge": {
+    "browserName": "MicrosoftEdge",
+    "platform": "Windows 10",
+    "version": "16.16299",
+    "port": 4444
+  },
+  "ie11": {
+    "browserName": "internet explorer",
+    "version": "11.103",
+    "killInstances": true,
+    "port": 4444,
+    "nativeEvents": false,
+    "unexpectedAlertBehaviour": "accept",
+    "ignoreProtectedModeSettings": true,
+    "enablePersistentHover": true,
+    "requireWindowFocus": true
+  },
+  "androidEmulator": {
+    "automationName": "appium",
+    "browserName": "Chrome",
+    "appium-version": "1.7.2",
+    "platformName": "Android",
+    "platformVersion": "8.1.0",
+    "deviceName": "Nexus6_API27",
+    "port": 4723
+  },
+  "androidDevice": {
+    "automationName": "uiautomator2",
+    "browserName": "Chrome",
+    "deviceName": "s7Device",
+    "platformName": "Android",
+    "udid": "9889aa463555525447",
+    "platformVersion": "7.0",
+    "newCommandTimeout": 150,
+    "port": 4723
+  },
+  "androidChromeMobile": {
+    "maxInstances": 1,
+    "browserName": "chrome",
+    "chromeOptions": {
+      "mobileEmulation": {
+        "deviceName": "Galaxy S5"
+       }
+    },
+    "port": 4444
+  },
+  "iphoneSimulator": {
+    "automationName": "XCUITest",
+    "browserName": "Safari",
+    "appium-version": "1.7.2",
+    "platformName": "iOS",
+    "platformVersion": "11.3",
+    "deviceName": "iPhone X",
+    "newCommandTimeout": 120,
+    "showXcodeLog": true,
+    "port": 4723
+  },
+  "iphoneChromeMobile": {
+    "maxInstances": 1,
+    "browserName": "chrome",
+    "chromeOptions": {
+      "mobileEmulation": {
+        "deviceName": "iPhone X"
+       }
+    },
+    "port": 4444
+  },
+  "multiDesktop": {
+    "port": 4444
+  },
+  "multiMobile": {
+    "port": 4723
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "url" :{ "URL": "/" },
+  "hrefs" : { "LOGIN_LINK": "a[href='login?goto=news']" },
+  "buttons" : {},
+  "dropdowns" :{},
+  "inputs" :{},
+  "radio_buttons":{},
+  "special" :{}
+}

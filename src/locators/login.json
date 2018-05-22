@@ -1,0 +1,15 @@
+{
+  "url" :{ "URL": "/login?goto=news" },
+  "hrefs" : {},
+  "buttons" : {
+    "LOGIN_BUTTON": "input[value='login']",
+    "FORGOT_PASSWORD_LINK": "a[href='forgot']"
+  },
+  "dropdowns" :{},
+  "inputs" :{
+    "USERNAME_INPUT": "input[name='acct']",
+    "PASSWORD_INPUT": "input[name='pw']"
+  },
+  "radio_buttons":{},
+  "special" :{}
+}
