@@ -8,7 +8,7 @@ const featuresPath = "./test/Product/features/*.feature";
 let filesWithTags = "";
 
 //Filter out feature files that don't have specified tags, this prevents unnecessary loading of browser driver
-if (process.env.TAG !== "" && process.env.TAG !== "@All") {
+if (process.env.TAG && process.env.TAG !== "" && process.env.TAG !== "@All") {
   const expressionNode = process.env.TAG.match(/(@\w+)/g) || []
   filesWithTags = glob.sync(featuresPath).map((file) => {
     const content = fs.readFileSync(file, 'utf8')
