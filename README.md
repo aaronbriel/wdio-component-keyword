@@ -1,4 +1,4 @@
-# webdriverio-seed
+# webdriverio-component-keyword
 A WebDriverIO project that supports web and mobile app test automation. The framework implements a hybrid, keyword-driven page component pattern, which makes adding locators as simple as placing two strings in a JSON file and filling in a Cucumber step.
 
 ## Tech Stack 
