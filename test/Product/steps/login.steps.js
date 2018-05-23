@@ -56,33 +56,3 @@ When(/^I answer "(.*?)" incorrectly$/,
     Driver.fillElementWithText(require(pagePath + `${global.pageContext}.json`).inputs[element], value);
   }
 );
-
-/**
- * Looks at a list of questions from the login.data.json file and answers correctly or incorrectly.
- * @param {*} question Question asked on the login screen.
- * @param {*} answerCorrectly Either grabs the correct answer from JSON file or randomly generates an answer.
- * @returns answer to be passed into text box.
- */
-function CheckQuestion(question, answerCorrectly) {
-  const UUID = require('uuid-js');
-  var value;
-  switch (question.toString().replace(/,\s*$/, "")) {
-    case require(dataPath + "login.data.json").questions["QUESTION1"]:
-      value = answerCorrectly ? require(dataPath + "login.data.json").answers["ANSWER1"] : UUID.create().toString();
-      break;
-    case require(dataPath + "login.data.json").questions["QUESTION2"]:
-      value = answerCorrectly ? require(dataPath + "login.data.json").answers["ANSWER2"] : UUID.create().toString();
-      break;
-    case require(dataPath + "login.data.json").questions["QUESTION3"]:
-      value = answerCorrectly ? require(dataPath + "login.data.json").answers["ANSWER3"] : UUID.create().toString();
-      break;
-    case require(dataPath + "login.data.json").questions["QUESTION4"]:
-      value = answerCorrectly ? require(dataPath + "login.data.json").answers["ANSWER4"] : UUID.create().toString();
-      break;
-    case require(dataPath + "login.data.json").questions["QUESTION5"]:
-      value = answerCorrectly ? require(dataPath + "login.data.json").answers["ANSWER5"] : UUID.create().toString();
-      break;
-    default: assert(false, "Did not have question in list: " + question);
-  }
-  return value;
-}
